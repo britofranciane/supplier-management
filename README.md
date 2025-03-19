@@ -37,8 +37,8 @@ CRUD de Fornecedores onde é possível cadastrar, visualizar, editar e excluir f
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [https://github.com/britofranciane/supplier-management.git](https://m.youtube.com/shorts/7cxjaLvTTDg)
-    cd [supplier-management]
+    git clone [https://github.com/britofranciane/supplier-management.git]
+    cd supplier-management
     ```
 
 2.  **Instale as dependências:**
@@ -71,16 +71,22 @@ O arquivo `db.json` deve conter os dados que serão servidos pela API falsa. Exe
 {
   "suppliers": [
     {
-      "id": 1,
-      "name": "Fornecedor A",
-      "email": "fornecedorA@email.com",
-      "description": "Descrição do fornecedor A"
-    },
-    {
-      "id": 2,
-      "name": "Fornecedor B",
-      "email": "fornecedorB@email.com",
-      "description": "Descrição do fornecedor B"
+      "id": "d46c",
+      "name": "Padaria pão e trigo",
+      "email": "padaria@gmail.com",
+      "description": "Fornece pães, e saladas frescas. Pode ser fornecido todos os dias desde de quando eu me lembro. ",
+      "cep": "69097-555",
+      "state": "AM",
+      "city": "Águas Vermelhas",
+      "street": "Rua 223-II",
+      "number": "34",
+      "reference": "",
+      "contacts": [
+        {
+          "nameContact": "Paula",
+          "phone": "(72) 37468-2938"
+        }
+      ]
     }
   ]
 }
