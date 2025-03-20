@@ -29,4 +29,5 @@ export const schemaSupplierRegister = yup.object().shape({
   city: yup.string().required('Cidade é obrigatória'),
   street: yup.string().required('Logradouro é obrigatório'),
   number: yup.string().required('Número é obrigatório'),
+  reference: yup.string(),
 });

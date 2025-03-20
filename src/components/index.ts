@@ -6,6 +6,5 @@ export { default as Box } from './Box';
 export { default as Head } from './Head';
 export { default as Header } from './Header';
 export { default as CustomModal } from './CustomModal';
-export { default as CustomToast } from './CustomToast';
 export { default as CustomTextField } from './CustomTextField';
 export { default as CustomDialog } from './CustomDialog';

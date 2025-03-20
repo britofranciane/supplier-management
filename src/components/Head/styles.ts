@@ -23,3 +23,7 @@ export const Title = styled.h2`
     font-size: ${(props) => props.theme.typography.h4};
   }
 `;
+
+export const ContainerButton = styled.div`
+  min-width: min-content;
+`;

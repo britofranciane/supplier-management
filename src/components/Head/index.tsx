@@ -1,23 +1,31 @@
 import { CustomButton } from '@/components/index';
-import { HeadContainer, ContainerSearch } from './styles';
-import { InputAdornment, TextField, Tooltip } from '@mui/material';
+import { HeadContainer, ContainerSearch, ContainerButton } from './styles';
+import { InputAdornment, TextField, Tooltip, useMediaQuery } from '@mui/material';
 import { CloudDownload, Search } from '@mui/icons-material';
 
 interface Props {
   buttonContent: string;
   onClickButton: () => void;
   value: string;
-  onChange: () => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleExportCSV: () => void;
 }
 
-const Head: React.FC<Props> = ({ onClickButton, buttonContent, value, onChange, handleExportCSV }) => {
+const Head: React.FC<Props> = ({
+  onClickButton,
+  buttonContent,
+  value,
+  onChange,
+  handleExportCSV,
+}) => {
+  const isTabletOrLess = useMediaQuery('(max-width:1024px)');
+
   return (
     <HeadContainer>
       <ContainerSearch>
         <TextField
           size="small"
-          placeholder="Buscar um fornecedor, busque por nome, descrição, contato"
+          placeholder="Buscar fornecedor por nome, contato, etc."
           value={value}
           onChange={onChange}
           slotProps={{
@@ -32,7 +40,7 @@ const Head: React.FC<Props> = ({ onClickButton, buttonContent, value, onChange, 
           sx={{
             borderRadius: '8px',
             width: '100%',
-            maxWidth: '500px',
+            maxWidth: isTabletOrLess ? '350px' : '500px',
             '& .MuiOutlinedInput-notchedOutline': {
               borderRadius: '8px',
             },
@@ -40,24 +48,26 @@ const Head: React.FC<Props> = ({ onClickButton, buttonContent, value, onChange, 
         />
       </ContainerSearch>
       <ContainerSearch>
-        <div>
-          <Tooltip title="Exportar dados para CSV" arrow>
-            <CustomButton
-              size={'large'}
-              color="success"
-              variant="contained"
-              startIcon={<CloudDownload />}
-              onClick={handleExportCSV}
-            >
-              Exportar CSV
-            </CustomButton>
-          </Tooltip>
-        </div>
-        <div>
-          <CustomButton onClick={onClickButton} variant="contained" style={{ width: '200px' }} size={'large'}>
+        <Tooltip title="Exportar CSV" arrow>
+          <CustomButton
+            size={'large'}
+            color="success"
+            variant="contained"
+            startIcon={<CloudDownload />}
+            onClick={handleExportCSV}
+            style={{
+              minWidth: isTabletOrLess ? 'auto' : '160px',
+              padding: isTabletOrLess ? '8px' : '8px 16px',
+            }}
+          >
+            {!isTabletOrLess ? 'Exportar CSV' : 'Export'}
+          </CustomButton>
+        </Tooltip>
+        <ContainerButton>
+          <CustomButton onClick={onClickButton} variant="contained" size={'large'}>
             {buttonContent}
           </CustomButton>
-        </div>
+        </ContainerButton>
       </ContainerSearch>
     </HeadContainer>
   );

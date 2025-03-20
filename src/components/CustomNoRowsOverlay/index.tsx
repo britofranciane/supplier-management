@@ -10,8 +10,8 @@ const CustomNoRowsOverlay: React.FC = () => {
       <Message>
         <h2>Nenhum Fornecedor encontrado!</h2>
         <p>
-          Parece que ainda não há fornecedores cadastrados. Clique no botão "Cadastrar Fornecedor" para adicionar novos
-          fornecedores e começar!
+          Não há fornecedores cadastrados ou a busca não retornou resultados. Clique em 'Cadastrar Fornecedor' para
+          adicionar novos fornecedores.
         </p>
       </Message>
       {/* <AnimationContainer>

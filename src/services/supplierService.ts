@@ -19,13 +19,13 @@ export const createSupplier = async (data: Supplier): Promise<Supplier> => {
   return response.data;
 };
 
-export const updateSupplier = async (data: Supplier, id: string): Promise<Supplier> => {
+export const updateSupplier = async (data: Supplier, id: number): Promise<Supplier> => {
   if (!id) throw new Error('Id é necessário');
   const response = await api.put(`/suppliers/${id}`, data);
   return response.data;
 };
 
-export const deleteSupplier = async (id: string): Promise<void> => {
+export const deleteSupplier = async (id: number): Promise<void> => {
   if (!id) throw new Error('Id é necessário');
 
   try {
