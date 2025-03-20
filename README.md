@@ -1,8 +1,23 @@
 # Supplier Management
+![supplier-sem-dados](https://github.com/user-attachments/assets/c3ed1969-63b3-49c0-ab37-b7dd9813ea55)
+
+![supplier-datails](https://github.com/user-attachments/assets/e71139c3-e5ed-41ff-9b22-6b5bd945df4c)
+
+![supplier-edit](https://github.com/user-attachments/assets/4fff471e-713f-4bcb-94db-1ffffc7aec9a)
+
+![supplier-delete](https://github.com/user-attachments/assets/5436d49b-5be0-4449-808c-41085ab900b3)
 
 ## Visão Geral
 
-CRUD de Fornecedores onde é possível cadastrar, visualizar, editar e excluir fornecedores
+CRUD de Fornecedores onde é possível cadastrar, visualizar, editar e excluir fornecedores.
+
+Recursos Extras
+
+● Abrir contato de fornecedor no WhatsApp;
+
+● Função de exportar lista de fornecedores em um arquivo CSV;
+
+● Vizualizar localização do fornecedor com Google Maps;
 
 ## Tecnologias Utilizadas
 
